@@ -36,7 +36,9 @@ function App() {
 		<div className="app">
           <div class="hero-card"> 
             <h1>{subdomain}day
-							<span> is today.</span>
+							<div>
+								<span> is today.</span>
+							</div>
 						</h1>
             <article>
               <p>This site automatically changes it's subdomain depending on the day of the week.<br></br>

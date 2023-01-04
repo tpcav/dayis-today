@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Figtree:wght@400;500;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Figtree', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(126, 171, 199);
@@ -28,7 +28,7 @@ code {
   text-align: center;
   color: rgb(87, 125, 174);
   width: 300px;
-  font-family:serif;
+  font-family: 'DM Serif Display', serif;
 }
 
 .hero-card p {
@@ -37,10 +37,9 @@ code {
   color: rgb(208, 208, 208);
 }
 
-.hero-card span {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-  sans-serif;
+.hero-card div{
+  font-family: 'Figtree', sans-serif;
+  margin: -25px;
   color: rgba(87, 125, 174, 0.349);
 }
 
