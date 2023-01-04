@@ -76,7 +76,7 @@ function App() {
             <h1>{day}day is today.</h1>
             <article>
               <p>This website changes its domain name depending on the day.<br></br>
-                <p>By Tom Cav, 2023</p>
+                <p>By Tom Cav, 2023, hello test</p>
               </p>
             </article>
           </div>
