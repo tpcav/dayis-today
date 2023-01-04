@@ -92,7 +92,7 @@ function App() {
 								href={
 									window.location.protocol +
 									"//" +
-									day +
+									user.username +
 									"." +
 									window.location.host
 								}
