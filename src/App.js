@@ -58,7 +58,7 @@ function App() {
 	}, []);
 
 	const currentSubdomain = window.location.hostname.split('.')[0]; // get the current subdomain
-  if (!weekday.includes(currentSubdomain)) {
+  if (currentSubdomain != day)) {
     window.location.replace('https://${day}.dayis.today/');
   }
 
