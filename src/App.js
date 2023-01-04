@@ -1,3 +1,5 @@
+// Customized by Thomas Cavalcante, January 2023
+
 import { useEffect, useState } from "react";
 import "./App.css";
 
