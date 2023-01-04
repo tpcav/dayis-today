@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-const weekday = ["Sun","Mon","Tues","Wednes","Thurs","Fri","Satur"];
+const weekday = ["sun","mon","tues","wednes","thurs","fri","satur"];
 
 const date = new Date();
 let day = weekday[date.getDay()];
@@ -44,6 +44,8 @@ const users = [
 	},
 ];
 
+const allowedSubdomains = ['sub1', 'sub2']; // list of allowed subdomains
+
 function App() {
 	const [subdomain, setSubDomain] = useState(null);
 	useEffect(() => {
@@ -51,9 +53,15 @@ function App() {
 
 		const arr = host
 			.split(".")
-			.slice(0, host.includes("localhost") ? -1 : -2);
+			.slice(0, host.includes("dayis.today") ? -1 : -2);
 		if (arr.length > 0) setSubDomain(arr[0]);
 	}, []);
+
+	const currentSubdomain = window.location.hostname.split('.')[0]; // get the current subdomain
+  if (!weekday.includes(currentSubdomain)) {
+    window.location.replace('https://{day}.dayis.today/');
+  }
+
 	const requestedUser = users.find((user) => user.username === subdomain);
 	return (
 		<div className="app">
@@ -92,7 +100,7 @@ function App() {
 								href={
 									window.location.protocol +
 									"//" +
-									user.username +
+									day +
 									"." +
 									window.location.host
 								}
