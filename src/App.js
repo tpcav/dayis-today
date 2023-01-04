@@ -59,7 +59,7 @@ function App() {
 
 	const currentSubdomain = window.location.hostname.split('.')[0]; // get the current subdomain
   if (!weekday.includes(currentSubdomain)) {
-    window.location.replace('https://{day}.dayis.today/');
+    window.location.replace('https://${day}.dayis.today/');
   }
 
 	const requestedUser = users.find((user) => user.username === subdomain);
