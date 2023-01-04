@@ -47,7 +47,7 @@ function App() {
             </article>
           </div>
 			<p class="footer">
-				<a class="my-link" href="https://www.linkwear.co/">TC</a>
+				<a class="my-link" href="https://www.linkwear.co/">TomCav</a>
 				<div className="footer-right">
 					<p className="source-text"></p>
 					

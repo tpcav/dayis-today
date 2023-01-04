@@ -71,9 +71,10 @@ code {
 
 .my-link {
   font-size: 1.4rem;
-  font-family: 'Gill Sans';
   text-decoration: none;
   color: rgb(87, 125, 174);
+  font-weight: bold;
+  font-family: 'Figtree', sans-serif;
 }
 
 .my-link:hover {
