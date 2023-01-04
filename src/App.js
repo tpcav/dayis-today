@@ -20,7 +20,7 @@ function App() {
 		// Split the name up
 		const arr = host
 			.split(".")
-			.slice(0, host.includes("dayis.today") ? -1 : -2);
+			.slice(0, host.includes("localhost:3000") ? -1 : -2);
 		if (arr.length > 0) setSubDomain(arr[0]);
 	}, []);
 
