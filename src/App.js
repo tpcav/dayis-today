@@ -60,7 +60,7 @@ function App() {
 	const currentSubdomain = window.location.hostname.split('.')[0]; // get the current subdomain
   if (currentSubdomain !== day) {
 			 let baseURL = '.dayis.today/';
-				let dayURL = (${day}${baseURL});
+				let dayURL = day + baseURL;
     window.location.replace(dayURL);
   }
 
