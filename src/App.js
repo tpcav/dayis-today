@@ -1,87 +1,39 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
+// Weekday name list
 const weekday = ["sun","mon","tues","wednes","thurs","fri","satur"];
 
+// Getting the date and day of the week
 const date = new Date();
 let day = weekday[date.getDay()];
-
-const users = [
-	{
-		username: "sunday",
-		age: 15,
-		hobbies: ["Football", "Cricket"],
-	},
-	{
-		username: "monday",
-		age: 23,
-		hobbies: ["Reading", "Writing"],
-	},
-  {
-		username: "tuesday",
-		age: 15,
-		hobbies: ["Football", "Cricket"],
-	},
-	{
-		username: "wednesday",
-		age: 23,
-		hobbies: ["Reading", "Writing"],
-	},
-  {
-		username: "thrusday",
-		age: 15,
-		hobbies: ["Football", "Cricket"],
-	},
-	{
-		username: "friday",
-		age: 23,
-		hobbies: ["Reading", "Writing"],
-	},
-  {
-		username: "saturday",
-		age: 23,
-		hobbies: ["Reading", "Writing"],
-	},
-];
-
-const allowedSubdomains = ['sub1', 'sub2']; // list of allowed subdomains
 
 function App() {
 	const [subdomain, setSubDomain] = useState(null);
 	useEffect(() => {
-		const host = window.location.host; // gets the full domain of the app
 
+		// Get the full domain of the app
+		const host = window.location.host;
+
+		// Split the name up
 		const arr = host
 			.split(".")
 			.slice(0, host.includes("dayis.today") ? -1 : -2);
 		if (arr.length > 0) setSubDomain(arr[0]);
 	}, []);
 
-	const currentSubdomain = window.location.hostname.split('.')[0]; // get the current subdomain
+	// Get the current subdomain for user search
+	const currentSubdomain = window.location.hostname.split('.')[0];
+
+	// If user search does not equal current subdomain (day) => error page
   if (currentSubdomain !== day) {
     window.location.replace('https://$error.dayis.today/');
   }
 
-	const requestedUser = users.find((user) => user.username === subdomain);
 	return (
 		<div className="app">
-			{subdomain ? (
-				requestedUser ? (
-					<div>
-						<h1>Username</h1>
-						<h3>{requestedUser.username}</h3>
-						<h1>Age</h1>
-						<h3>{requestedUser.age}</h3>
-						<h1>Hobbies</h1>
-						<ul>
-							{requestedUser.hobbies.map((hobby) => (
-								<li key={hobby}>{hobby}</li>
-							))}
-						</ul>
-					</div>
-				) : (
           <div class="hero-card"> 
-            <h1>{day}day
+            <h1>{subdomain}day
 							<span> is today.</span>
 						</h1>
             <article>
@@ -90,27 +42,6 @@ function App() {
               </p>
             </article>
           </div>
-				)
-			) : (
-				<div>
-					{users.map((user) => (
-						<div>
-							<a
-								key={user.username}
-								href={
-									window.location.protocol +
-									"//" +
-									day +
-									"." +
-									window.location.host
-								}
-							>
-								{user.username}
-							</a>
-						</div>
-					))}
-				</div>
-			)}
 			<p class="footer">
 				<a class="my-link" href="https://www.linkwear.co/">TC</a>
 				<div className="footer-right">
