@@ -1,4 +1,17 @@
+TODO - add to readme and clean up
+
 # dayis-today
+
+I was learning about subdomain generation and had a stupid idea... <br>
+
+Can I make a website's subdomain automatically change depending on the day of the week?
+- Vercel subdomains *.example.com
+- Javascript's getDate() function that displays date based on local time
+
+## How to Visit Site
+- Root domain is 'dayis.today'
+- The only way to excess the site is by the URL [Inset Current Day].dayis.today
+- Example URL for a Monday: "mon.dayis.today"
 
 ## Getting Started
 
