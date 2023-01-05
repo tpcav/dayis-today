@@ -10,7 +10,7 @@ Can I make a website's subdomain automatically change depending on the day of th
 
 ## How to Visit Site
 - Root domain is 'dayis.today'
-- The only way to excess the site is by the URL [Inset Current Day].dayis.today
+- The only way to excess the site is by the URL [Insert Current Day].dayis.today
 - Example URL for a Monday: "mon.dayis.today"
 
 ## Getting Started
